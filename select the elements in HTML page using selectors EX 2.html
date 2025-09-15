@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectors Example</title>
+  <style>
+    .highlight { color: red; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1 id="title">Avul Pakir Jainulabdeen Abdul Kalam was an Indian aerospace scientist and statesman who served as the president of India from 2002 to 2007. Born and raised in a Muslim family in Rameswaram, Tamil Nadu, Kalam studied physics and aerospace engineering. Wikipedia
+Born: 15 October 1931, Rameswaram
+Died: 27 July 2015 (age 83 years), Shillong
+Education: Madras Institute of Technology, Anna University (1955 to 1957) ·
+Parents: Jainulabiddin Marakayar, Ashiamma Jainulabiddin
+Awards: Bharat Ratna, King Charles II Medal · 
+Full name: Avul Pakir Jainulabdeen Abdul Kalam</h1>
+  <p class="text">This is a paragraph with class "text".</p>
+  <p class="text">Another paragraph with the same class.</p>
+  <button>Click me to next paragraph</button>
+
+  <script>
+    // 1. Select element by ID
+    let heading = document.getElementById("title");
+    console.log("By ID:", heading.textContent);
+    heading.style.color = "blue";
+
+    // 2. Select elements by Class
+    let paragraphs = document.getElementsByClassName("text");
+    console.log("By Class:");
+    for (let p of paragraphs) {
+      console.log(p.textContent);
+      p.classList.add("highlight");
+    }
+
+    // 3. S
